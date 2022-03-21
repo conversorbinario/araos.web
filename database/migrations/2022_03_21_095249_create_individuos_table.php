@@ -15,6 +15,13 @@ class CreateIndividuosTable extends Migration
     {
         Schema::create('individuos', function (Blueprint $table) {
             $table->id();
+            $table->enum('sexo', ['male', 'female']);
+            $table->enum('plumaje', ['estival', 'invernal', 'eclipse', 'juvenil', 'inmaduro', 'invierno1', 'verano1']);
+
+
+            $table->foreign('avistamento_id')->references('id')->on('avistamentos');
+            $table->foreign('tipo_ave_id')->references('id')->on('tipo_aves');
+
             $table->timestamps();
         });
     }

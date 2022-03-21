@@ -15,6 +15,13 @@ class CreateMediaIndividuosTable extends Migration
     {
         Schema::create('media_individuos', function (Blueprint $table) {
             $table->id();
+
+            $table->string('foto_path');
+            $table->string('audio_path');
+
+
+            $table->foreign('individuo_id')->references('id')->on('individuos');
+
             $table->timestamps();
         });
     }

@@ -15,6 +15,14 @@ class CreateAvistamentosTable extends Migration
     {
         Schema::create('avistamentos', function (Blueprint $table) {
             $table->id();
+            $table->timestamps('engadido', $precision = 0);
+
+            //usuario que ha realizado avistamiento
+            $table->foreign('user_id')->references('id')->on('users');
+
+            //coordenadas del avistamiento
+            $table->foreign('coor_id')->references('id')->on('lugars');
+
             $table->timestamps();
         });
     }

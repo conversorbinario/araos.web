@@ -15,6 +15,8 @@ class CreateLugarsTable extends Migration
     {
         Schema::create('lugars', function (Blueprint $table) {
             $table->id();
+            $table->string('coordenadas')->unique();
+            $table->string('concello');
             $table->timestamps();
         });
     }

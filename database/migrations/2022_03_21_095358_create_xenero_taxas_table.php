@@ -13,8 +13,10 @@ class CreateXeneroTaxaTable extends Migration
      */
     public function up()
     {
-        Schema::create('xenero_taxa', function (Blueprint $table) {
+        Schema::create('xenero_taxas', function (Blueprint $table) {
             $table->id();
+            $table->string('nombre');
+
             $table->timestamps();
         });
     }

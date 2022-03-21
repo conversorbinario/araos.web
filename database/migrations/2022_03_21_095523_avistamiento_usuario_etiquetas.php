@@ -13,7 +13,13 @@ class AvistamientoUsuarioEtiqueta extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('avistamiento_usuario_etiquetas', function (Blueprint $table) {
+            $table->id();
+            $table->foreign('usuario_id')->references('id')->on('users');
+            $table->foreign('avistamiento_id')->references('id')->on('avistamentos');
+
+            $table->timestamps();
+        });
     }
 
     /**
