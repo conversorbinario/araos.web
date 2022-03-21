@@ -3,10 +3,10 @@
 namespace App\Policies;
 
 use App\Models\User;
-use App\Models\Xenero_taxon;
+use App\Models\Xen_espe;
 use Illuminate\Auth\Access\HandlesAuthorization;
 
-class XeneroTaxonPolicy
+class XenEspePolicy
 {
     use HandlesAuthorization;
 
@@ -25,10 +25,10 @@ class XeneroTaxonPolicy
      * Determine whether the user can view the model.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Models\Xenero_taxon  $xeneroTaxon
+     * @param  \App\Models\Xen_espe  $xenEspe
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function view(User $user, Xenero_taxon $xeneroTaxon)
+    public function view(User $user, Xen_espe $xenEspe)
     {
         //
     }
@@ -48,10 +48,10 @@ class XeneroTaxonPolicy
      * Determine whether the user can update the model.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Models\Xenero_taxon  $xeneroTaxon
+     * @param  \App\Models\Xen_espe  $xenEspe
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function update(User $user, Xenero_taxon $xeneroTaxon)
+    public function update(User $user, Xen_espe $xenEspe)
     {
         //
     }
@@ -60,10 +60,10 @@ class XeneroTaxonPolicy
      * Determine whether the user can delete the model.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Models\Xenero_taxon  $xeneroTaxon
+     * @param  \App\Models\Xen_espe  $xenEspe
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function delete(User $user, Xenero_taxon $xeneroTaxon)
+    public function delete(User $user, Xen_espe $xenEspe)
     {
         //
     }
@@ -72,10 +72,10 @@ class XeneroTaxonPolicy
      * Determine whether the user can restore the model.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Models\Xenero_taxon  $xeneroTaxon
+     * @param  \App\Models\Xen_espe  $xenEspe
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function restore(User $user, Xenero_taxon $xeneroTaxon)
+    public function restore(User $user, Xen_espe $xenEspe)
     {
         //
     }
@@ -84,10 +84,10 @@ class XeneroTaxonPolicy
      * Determine whether the user can permanently delete the model.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Models\Xenero_taxon  $xeneroTaxon
+     * @param  \App\Models\Xen_espe  $xenEspe
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function forceDelete(User $user, Xenero_taxon $xeneroTaxon)
+    public function forceDelete(User $user, Xen_espe $xenEspe)
     {
         //
     }

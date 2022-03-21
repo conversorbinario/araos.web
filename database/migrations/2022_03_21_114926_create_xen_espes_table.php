@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AvistamientoUsuarioEtiqueta extends Migration
+class CreateXenEspesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,9 @@ class AvistamientoUsuarioEtiqueta extends Migration
      */
     public function up()
     {
-        Schema::create('avistamiento_usuario_etiquetas', function (Blueprint $table) {
+        Schema::create('xen_espes', function (Blueprint $table) {
             $table->id();
-            $table->foreign('usuario_id')->references('id')->on('users');
-            $table->foreign('avistamiento_id')->references('id')->on('avistamentos');
+            $table->string('nombre');
 
             $table->timestamps();
         });
@@ -29,6 +28,6 @@ class AvistamientoUsuarioEtiqueta extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('xen_espes');
     }
 }

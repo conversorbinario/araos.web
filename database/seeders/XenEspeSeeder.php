@@ -4,7 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 
-class XeneroTaxonSeeder extends Seeder
+class XenEspeSeeder extends Seeder
 {
     /**
      * Run the database seeds.

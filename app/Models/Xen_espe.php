@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Xenero_taxon extends Model
+class Xen_espe extends Model
 {
     use HasFactory;
 }

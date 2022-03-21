@@ -20,6 +20,7 @@ class CreateMediaIndividuosTable extends Migration
             $table->string('audio_path');
 
 
+            $table->unsignedBigInteger('individuo_id');
             $table->foreign('individuo_id')->references('id')->on('individuos');
 
             $table->timestamps();

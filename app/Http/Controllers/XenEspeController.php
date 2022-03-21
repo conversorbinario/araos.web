@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Xenero_taxon;
-use App\Http\Requests\StoreXenero_taxonRequest;
-use App\Http\Requests\UpdateXenero_taxonRequest;
+use App\Models\Xen_espe;
+use App\Http\Requests\StoreXen_espeRequest;
+use App\Http\Requests\UpdateXen_espeRequest;
 
-class XeneroTaxonController extends Controller
+class XenEspeController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -31,10 +31,10 @@ class XeneroTaxonController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StoreXenero_taxonRequest  $request
+     * @param  \App\Http\Requests\StoreXen_espeRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreXenero_taxonRequest $request)
+    public function store(StoreXen_espeRequest $request)
     {
         //
     }
@@ -42,10 +42,10 @@ class XeneroTaxonController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Xenero_taxon  $xenero_taxon
+     * @param  \App\Models\Xen_espe  $xen_espe
      * @return \Illuminate\Http\Response
      */
-    public function show(Xenero_taxon $xenero_taxon)
+    public function show(Xen_espe $xen_espe)
     {
         //
     }
@@ -53,10 +53,10 @@ class XeneroTaxonController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Xenero_taxon  $xenero_taxon
+     * @param  \App\Models\Xen_espe  $xen_espe
      * @return \Illuminate\Http\Response
      */
-    public function edit(Xenero_taxon $xenero_taxon)
+    public function edit(Xen_espe $xen_espe)
     {
         //
     }
@@ -64,11 +64,11 @@ class XeneroTaxonController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdateXenero_taxonRequest  $request
-     * @param  \App\Models\Xenero_taxon  $xenero_taxon
+     * @param  \App\Http\Requests\UpdateXen_espeRequest  $request
+     * @param  \App\Models\Xen_espe  $xen_espe
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateXenero_taxonRequest $request, Xenero_taxon $xenero_taxon)
+    public function update(UpdateXen_espeRequest $request, Xen_espe $xen_espe)
     {
         //
     }
@@ -76,10 +76,10 @@ class XeneroTaxonController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Xenero_taxon  $xenero_taxon
+     * @param  \App\Models\Xen_espe  $xen_espe
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Xenero_taxon $xenero_taxon)
+    public function destroy(Xen_espe $xen_espe)
     {
         //
     }

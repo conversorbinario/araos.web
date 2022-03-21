@@ -4,7 +4,7 @@ namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class XeneroTaxonFactory extends Factory
+class XenEspeFactory extends Factory
 {
     /**
      * Define the model's default state.

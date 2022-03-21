@@ -18,8 +18,10 @@ class CreateIndividuosTable extends Migration
             $table->enum('sexo', ['male', 'female']);
             $table->enum('plumaje', ['estival', 'invernal', 'eclipse', 'juvenil', 'inmaduro', 'invierno1', 'verano1']);
 
-
+            $table->unsignedBigInteger('avistamento_id');
             $table->foreign('avistamento_id')->references('id')->on('avistamentos');
+
+            $table->unsignedBigInteger('tipo_ave_id');
             $table->foreign('tipo_ave_id')->references('id')->on('tipo_aves');
 
             $table->timestamps();
