@@ -12,6 +12,6 @@ class Media_individuo extends Model
 
     public function individuo()
     {
-        return $this->hasOne(Individuo::class, null, 'individuo_id');
+        return $this->belongsTo(Individuo::class, 'individuo_id');
     }
 }

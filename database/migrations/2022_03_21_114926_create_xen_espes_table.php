@@ -15,6 +15,7 @@ class CreateXenEspesTable extends Migration
     {
         Schema::create('xen_espes', function (Blueprint $table) {
             $table->id();
+            
             $table->string('nombre');
 
             $table->timestamps();

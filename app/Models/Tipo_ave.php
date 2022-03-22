@@ -9,9 +9,14 @@ class Tipo_ave extends Model
 {
     use HasFactory;
 
+    public function tipoAve()
+    {
+        return $this->hasMany(Individuo::class, 'tipo_ave_id');
+    }
+
 
     public function xenero()
     {
-        return $this->hasOne(Xen_espe::class, null, 'xenero_esp_id');
+        return $this->belongsTo(Xen_espe::class, 'xenero_esp_id');
     }
 }

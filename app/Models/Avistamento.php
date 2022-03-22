@@ -13,12 +13,17 @@ class Avistamento extends Model
 
     public function usuario()
     {
-        return $this->belongsTo(User::class, null, 'user_id');
+        return $this->belongsTo(User::class, 'user_id');
     }
 
     public function coordinadas()
     {
-        return $this->hasOne(Lugar::class, null, 'coor_id');
+        return $this->belongsTo(Lugar::class, 'coor_id');
+    }
+
+    public function individuos()
+    {
+        return $this->hasMany(Individuo::class, 'avistamento_id');
     }
 
 

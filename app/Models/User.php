@@ -45,7 +45,7 @@ class User extends Authenticatable
 
     public function avistamentos()
     {
-        return $this->hasMany(Avistamento::class);
+        return $this->hasMany(Avistamento::class, 'user_id');
     }
 
     

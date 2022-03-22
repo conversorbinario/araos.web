@@ -9,15 +9,23 @@ class Individuo extends Model
 {
     use HasFactory;
 
+    
 
     public function avistamiento()
     {
-        return $this->hasOne(Avistamento::class, null, 'avistamento_id');
+        return $this->belongsTo(Avistamento::class,'avistamento_id');
     }
 
     public function tipoAve()
     {
-        return $this->hasOne(Tipo_ave::class, null, 'tipo_ave_id');
+        return $this->belongsTo(Tipo_ave::class, 'tipo_ave_id');
     }
+
+    public function media()
+    {
+        return $this->hasMany(Media_individuo::class, 'individuo_id');
+    }
+
+
 
 }
