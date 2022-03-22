@@ -15,6 +15,14 @@ class CreateUserAvistas extends Migration
     {
         Schema::create('user_avistas', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('user_id');
+
+            $table->foreign('user_id')->references('id')->on('users');
+            $table->unsignedBigInteger('avistamento_id');
+
+            $table->foreign('avistamento_id')->references('id')->on('avistamentos');
+
+
             $table->timestamps();
         });
     }

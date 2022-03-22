@@ -48,5 +48,16 @@ class User extends Authenticatable
         return $this->hasMany(Avistamento::class, 'user_id');
     }
 
+
+    // To determine the table name of the relationship's intermediate table,
+    //  Eloquent will join the two related model names in alphabetical order. 
+    // However, you are free to override this convention. 
+    // You may do so by passing a second argument to the belongsToMany method
+
+    public function avistamentosEtiquetados()
+    {
+        return $this->belongsToMany(Avistamento::class, 'user_avistas', 'user_id', 'avistamento_id');
+    }
+
     
 }

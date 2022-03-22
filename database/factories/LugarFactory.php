@@ -14,7 +14,12 @@ class LugarFactory extends Factory
     public function definition()
     {
         return [
-            //
+            "coordenadas" => $this->faker->name(),
+            "concello" => $this->faker->county(),
+            "created_at" => now(),
+            "updated_at" => now(),
+
+
         ];
     }
 }
