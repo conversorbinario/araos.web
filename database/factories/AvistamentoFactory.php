@@ -3,8 +3,8 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use app\Models\Lugar;
-use app\Models\User;
+use App\Models\Lugar;
+use App\Models\User;
 
 class AvistamentoFactory extends Factory
 {
