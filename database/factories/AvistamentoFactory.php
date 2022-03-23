@@ -3,6 +3,8 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
+use app\Models\Lugar;
+use app\Models\User;
 
 class AvistamentoFactory extends Factory
 {
@@ -14,7 +16,10 @@ class AvistamentoFactory extends Factory
     public function definition()
     {
         return [
-            //
+            "coor_id" => Lugar::all()->random()->id,
+            "user_id" => User::all()->random()->id,
+            "created_at" => now(),
+            "updated_at" => now(),        
         ];
     }
 }

@@ -14,7 +14,9 @@ class XenEspeFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'name' => $this->faker->randomElement(['Xenero1', 'Xenero2', 'Xenero3', 'Xenero4']),
+            "created_at" => now(),
+            "updated_at" => now(),
         ];
     }
 }

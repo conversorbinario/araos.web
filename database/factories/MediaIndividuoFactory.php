@@ -4,6 +4,7 @@ namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 
+use app\Models\Individuo;
 class MediaIndividuoFactory extends Factory
 {
     /**
@@ -14,7 +15,12 @@ class MediaIndividuoFactory extends Factory
     public function definition()
     {
         return [
-            //
+            "foto_path" => $this->faker->name(),
+            "audio_path" => $this->faker->county(),
+            "individuo_id" => Individuo::all()->random()->id,
+            "created_at" => now(),
+            "updated_at" => now(),
+
         ];
     }
 }
